@@ -1,221 +1,270 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Qiuqiang Kong's Homepage</title>
-        <link rel="stylesheet" href="assets/css/stylesheet.css" />
-        <script src="https://use.fontawesome.com/3ecad3c41f.js"></script>
-    </head>
-    <body>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
 
-        <div class="col-3 nav">
-    <a href="#"><img src="assets/images/profile.jpg" class="w3-round" width="60%" /></a>
-    <h1>Qiuqiang Kong</h1>
-    <p>University of Surrey</p>
-    <p>q.kong [at] surrey.ac.uk </p>
-</div>
+			a {
+				text-decoration: none;
+			}
 
-        <div class="col-9 col-offset-3">
-            
-            <!-- biography -->
-            <div class="bio">
-    <h1> About me</h1>
-    <p>I am a final year Ph. D. student at Centre for Vision, Speech and Signal processing (CVSSP), University of Surrey under the superviosion of Profesor <a href="https://www.surrey.ac.uk/people/mark-plumbley">Mark. D. Plumbley</a>. My research interests include sound understanding and audio processing with artificial intelligence. My research topics include audio tagging, sound event detection, source separation of real-world sounds, general audio processing and music signal processing. I obtained my bachelor and master degree at South China University of Technology in 2012 and 2015. My <a href="assets/cv_kqq.pdf" target="_blank">CV</a> can be downloaded and <a href="https://scholar.google.com/citations?user=B6O3SycAAAAJ&hl=en&oi=ao">Google scholar</a> can be viewed.</p>
+			header {
+				width: 100%;
+				height: 50px;
+				background-color: #003366;
+				position: fixed;
+				z-index: 2;
+				color: white;
+			}
 
-    <p><b>Contact:</b> q.kong [at] surrey.ac.uk</p>
+			.header {
+				width: 1000px;
+				margin: auto;
+				line-height: 50px;
+			}
 
-<!-- publications -->
-<div class="paper-list">
-    <h1>Selected Publications</h1>
-    <ul>
-        
-      <li><div class="paper">
-        <b>Cross-task learning for audio tagging, sound event detection and spatial localization: DCASE 2019 baseline systems</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1904.03476" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/dcase2019_task1" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Yin Cao, Turab Iqbal, Yong Xu, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>arXiv preprint arXiv:1904.03476, 2019</b>
-        <br />
-        </div>
-      </li>
+			.logo {
+				float: left;
+				font-weight: 900;
+			}
 
-      <li><div class="paper">
-        <b>Weakly labelled audioset tagging with attention neural networks</b>&nbsp<a class="paper-link" href="https://epubs.surrey.ac.uk/852511/1/KongYuXuIWP19-aslp-audioset_accepted_ieee.pdf" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/audioset_classification" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Changsong Yu, Yong Xu, Turab Iqbal, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"> <b>IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2019 </b>
-        <br />
-        </div>
-      </li>
+			.nav {
+				float: right;
+			}
 
-      <li><div class="paper">
-        <b>Single-Channel Signal Separation and Deconvolution with Generative Adversarial Networks</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1906.07552" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/gan_separation_deconvolution" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Kong, Qiuqiang</b>, Yong Xu, Wenwu Wang, Philip J. B. Jackson, Mark D. Plumbley</span> <br/>
-        <span class="paper-conf"><b>IJCAI 2019</b>
-        <br />
-        </div>
-      </li>
+			.nav a {
+				color: white;
+				margin-right: 25px;
+			}
 
-      <li><div class="paper">
-        <b>Polyphonic Sound Event Detection and Localization using a Two-Stage Strategy</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1905.00268" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/yinkalario/Two-Stage-Polyphonic-Sound-Event-Detection-and-Localization" target="_blank">[code]</a>&nbsp<span style="font-weight:bold;color:red">Best reproducible award</span> <br />
-        <span class="paper-author">Yin Cao*, <b>Qiuqiang Kong*</b>, Turab Iqbal, Fengyan An, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>DCASE Workshop 2019</b>
-        <br />
-        </div>
-      </li>
+			.main {
+				width: 1000px;
+				margin: auto;
+			}
 
-      <li><div class="paper">
-        <b>Divergence Based Weighting for Information Channels in Deep Convolutional Neural Networks for Bird Audio Detection</b>&nbsp<a class="paper-link" href="http://150.162.46.34:8080/icassp2019/ICASSP2019/pdfs/0003052.pdf" target="_blank">[pdf]</a><br/>
-        <span class="paper-author">Cemre Zor, Muhammad Awais, Josef Kittler, Miroslaw Bober, Sameed Husain, <b>Qiuqiang Kong</b>, Christian Kroos</span> <br />
-        <span class="paper-conf"><b>ICASSP 2019</b>
-        <br />
-        </div>
-      </li>
+			.one {
+				padding-top: 80px;
+				justify-content: space-between;
+				display: flex;
+			}
 
-      <li><div class="paper">
-        <b>Acoustic Scene Generation with Conditional Samplernn</b>&nbsp<a class="paper-link" href="http://epubs.surrey.ac.uk/850808/1/Acoustic%20scene%20generation%20with%20conditional%20SampleRNN.pdf" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/sampleRNN_acoustic_scene_generation" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Yong Xu, Turab Iqbal, Yin Cao, Wenwu Wang, Mark D. Plumbley</span><br />
-        <span class="paper-conf"><b>ICASSP 2019</b>
-        <br />
-        </div>
-      </li>
+			.one img {
+				width: 173px;
+				height: 200px;
+			}
 
-      <li><div class="paper">
-        <b>Attention-based Atrous Convolutional Neural Networks: Visualisation and Understanding Perspectives of Acoustic Scenes</b>&nbsp<a class="paper-link" href="http://epubs.surrey.ac.uk/850587/1/RenKongHanPS19-icassp.pdf" target="_blank">[pdf]</a>
-        <br />
-        <span class="paper-author">Zhao Ren, <b>Qiuqiang Kong</b>, Jing Han, Mark D. Plumbley, Björn W. Schuller</span> <br />
-        <span class="paper-conf"><b>ICASSP 2019</b>
-        <br />
-        </div>
-      </li>
+			h1 {
+				font-weight: 500;
+			}
 
-      <li><div class="paper">
-        <b>Sound Event Detection with Sequentially Labelled Data Based on Connectionist Temporal Classification and Unsupervised Clustering</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1904.12102" target="_blank">[pdf]</a>
-        <a class="paper-code" href="" target="_blank">[code]</a> <br />
-        <span class="paper-author">Yuanbo Hou, <b>Qiuqiang Kong</b>, Shengchen Li, and Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>ICASSP 2019</b>
-        <br />
-        </div>
-      </li>
+			.main p {
+				font-size: 14.5px;
+				line-height: 25px;
+				margin: 20px 0;
+			}
 
-      <li><div class="paper">
-        <b>Sound Event Detection and Time–Frequency Segmentation from Weakly Labelled Data</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1804.04715" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/sed_time_freq_segmentation" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Yong Xu, Iwona Sobieraj, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP), 2019</b>
-        <br />
-        </div>
-      </li>
+			.main a {
+				color: #0055BA;
+				font-size: 14.5px;
+			}
 
-      <li><div class="paper">
-        <b>Capsule routing for sound event detection</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1806.04699" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/tqbl/gccaps" target="_blank">[code]</a> <br />
-        <span class="paper-author">Turab Iqbal, Yong Xu, <b>Qiuqiang Kong</b>, Wenwu Wang</span> <br />
-        <span class="paper-conf"><b>EUSIPCO 2018</b>
-        <br />
-        </div>
-      </li>
+			.main a:hover {
+				border-bottom: #0055BA 1.5px solid;
+			}
 
-      <li><div class="paper">
-        <b>DCASE 2018 Challenge baseline with convolutional neural networks</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1808.00773" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/dcase2018_task1" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Turab Iqbal, Yong Xu, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>DCASE Workshop 2018</b>
-        <br />
-        </div>
-      </li>
+			h3 {
+				font-weight: 400;
+				line-height: 50px;
+			}
 
-      <li><div class="paper">
-        <b>Multi-level attention model for weakly supervised audio classification</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1803.02353" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet" target="_blank">[code]</a> <br />
-        <span class="paper-author">Changsong Yu, Karim Said Barsim, <b>Qiuqiang Kong</b>, Bin Yang</span> <br />
-        <span class="paper-conf"><b>DCASE Workshop 2018</b>
-        <br />
-        </div>
-      </li>
+			h4 {
+				font-weight: 400;
+			}
 
-      <li><div class="paper">
-        <b>A joint separation-classification model for sound event detection of weakly labelled data</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1711.03037" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/ICASSP2018_joint_separation_classification" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Yong Xu, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>ICASSP 2018</b>
-        <br />
-        </div>
-      </li>
+			.main li {
+				font-size: 14.5px;
+				line-height: 25px;
+			}
 
-      <li><div class="paper">
-        <b>Audio set classification with attention model: A probabilistic perspective</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1711.00927" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/audioset_classification" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Yong Xu, Wenwu Wang, and Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>ICASSP 2018</b>
-        <br />
-        </div>
-      </li>
+			.one li {
+				margin-left: 50px;
+			}
 
-      <li><div class="paper">
-        <b>Large-scale weakly supervised audio classification using gated convolutional neural network</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1710.00343" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/yongxuUSTC/dcase2017_task4_cvssp" target="_blank">[code]</a> <br />
-        <span class="paper-author">Xu, Yong*, <b>Qiuqiang Kong</b>*, Wenwu Wang, and Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>ICASSP 2018</b>
-        <br />
-        </div>
-      </li>
+			.main h4 {
+				line-height: 40px;
 
-      <li><div class="paper">
-        <b>Convolutional gated recurrent neural network incorporating spatial features for audio tagging</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1702.07787" target="_blank">[pdf]</a>
-        <br />
-        <span class="paper-author">Yong Xu, <b>Qiuqiang Kong</b>, Qiang Huang, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>IJCNN 2017</b>
-        <br />
-        </div>
-      </li>
+			}
 
-      <li><div class="paper">
-        <b>Attention and localization based on a deep convolutional recurrent model for weakly supervised audio tagging</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1703.06052.pdf" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/yongxuUSTC/att_loc_cgrnn" target="_blank">[code]</a><br />
-        <span class="paper-author">Yong Xu, <b>Qiuqiang Kong</b>, Qiang Huang, Wenwu Wang, and Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>INTERSPEECH 2017</b>
-        <br />
-        </div>
-      </li>
+			#Talks p {
+				margin: 0;
+			}
 
-      <li><div class="paper">
-        <b>A joint detection-classification model for audio tagging of weakly labelled data</b>&nbsp<a class="paper-link" href="https://arxiv.org/pdf/1610.01797" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/audio_tagging_jdc" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Yong Xu, Wenwu Wang, Mark D. Plumbley</span> <br />
-        <span class="paper-conf"><b>ICASSP 2017</b>
-        <br />
-        </div>
-      </li>
+			#Talks img {
+				width: 320px;
+				height: 150px;
+			}
 
-      <li><div class="paper">
-        <b>Deep neural network baseline for DCASE challenge 2016</b>&nbsp<a class="paper-link" href="http://epubs.surrey.ac.uk/813518/1/Deep%20Neural%20Network%20Baseline%20for%20DCASE%20Challenge%202016%20Qiuqiang%20Kong%20v0%205.pdf" target="_blank">[pdf]</a>
-        <a class="paper-code" href="https://github.com/qiuqiangkong/DCASE2016_Task1" target="_blank">[code]</a> <br />
-        <span class="paper-author"><b>Qiuqiang Kong</b>, Iwona Sobieraj, Wenwu Wang, Mark Plumbley</span> <br />
-        <span class="paper-conf"><b>DCASE Workshop 2016</b>
-        <br />
-        </div>
-      </li>
-    </ul>
-    </div>
+			.talks {
+				justify-content: space-between;
+				display: flex;
+			}
 
-            <!-- awards -->
-    <div class="award">
-    <h1>Patents</h1>
-    <ul>
-        <li>Large scale music fingerprint and retrieval (CN103853836), bought by KUGOU, 2014.</li>
-    </ul>
-    </div>
+			#Publications p {
+				margin: 5px 0;
+			}
 
-    <div id="footer">
-        <span class="footer">
-          Profile photo took in Calgary, Canada in 2018 <br>
-          This homepage is adapted from <a href="https://shichenliu.github.io/" target="_blank">Shichen Liu</a>'s homepage.
-        </span>
-    </div>
+			.pu {
+				width: 100%;
+				height: 120px;
+				margin: 15px 0;
+			}
 
-        <script src="/assets/js/tool.js"></script>
-    </body>
+			.pu img {
+				float: left;
+				width: 300px;
+				height: 120px;
+				margin-right: 20px;
+			}
+
+			.pu h4 {
+				font-weight: 700;
+				font-size: 14.5px;
+				line-height: 25px;
+			}
+
+			.pu1 a {
+				color: #7F7F7F;
+			}
+
+			.pu1 a:hover {
+				border-bottom: 1.5px solid #7F7F7F;
+			}
+
+			.pu h4 a {
+				color: black;
+			}
+
+			.pu h4 a:hover {
+				border-bottom: black 1.5px solid;
+			}
+
+			.pu p {
+				line-height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="logo">
+					Qiuqiang Kong
+				</div>
+				<div class="nav">
+					<a href="#home">Home</a>
+					<a href="#Group">Group</a>
+					<a href="#Teaching">Teaching</a>
+					<a href="#Talks">Talks</a>
+					<a href="#Publications">Publications</a>
+				</div>
+
+			</div>
+		</header>
+		<div class="main">
+			<div id="home">
+				<div class="one">
+					<img src="./img/qiuqiangkong.jpg" alt="">
+					<div>
+						<h1>Qiuqiang Kong</h1>
+						<p>Assistant Professor <br>
+							Department of Electronic Engineering (EE)<br>
+							The Chinese University of Hong Kong (CUHK)<br>
+							Email: qiuqiangkong [at] gmail.com
+						</p>
+						<a href="https://scholar.google.com/citations?user=B6O3SycAAAAJ&hl=en&oi=ao">Google Scholar</a>
+					</div>
+					<div style="margin-right: 100px;">
+						<h4 style="margin-top: 30px;">Current Research Topics</h4>
+						<ul>
+							<li><a href="">Audio Understanding / Generation</a></li>
+							<li><a href="">Music Understanding / Generation</a></li>
+							<li><a href="">General Signal Processing</a></li>
+							<li><a href="">Audio Centric Multiple Modality Models</a></li>
+							<li><a href="">Audio Large Language Models (LLMs)</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="two">
+					<p>I am an Assistant Professor of <a href="http://www.ee.cuhk.edu.hk/en-gb/">Department of Electronic Engineering (EE)</a> at <a href="https://cuhk.edu.hk/">The Chinese University of Hong Kong (CUHK)</a>. I study <span style="color: #BB2222;font-weight: 600;">audio / music understanding</span> and <span style="color: #BB2222;font-weight: 600;">generation</span>. I also study <span style="color: #BB2222;font-weight: 600;">general signals processing</span> and <span style="color: #BB2222;font-weight: 600;">audio-centric multiple modality models</span> and <span style="color: #BB2222;font-weight: 600;">audio large language models (LLMs).</span>.
+					</p>
+					<p>Before joining CUHK, I was a research scientist at <a href="https://www.bytedance.com/en">ByteDance</a>. I finished my PhD at <a href="https://www.surrey.ac.uk/">University of Surrey</a>, advised by <a href="https://www.surrey.ac.uk/people/mark-plumbley">Mark D. Plumbley</a> and <a href="https://www.surrey.ac.uk/people/wenwu-wang">Wenwu Wang</a>.
+						I finished my graduate and undergraduate degrees at <a href="https://www.scut.edu.cn/en/">South China University of Technology</a>, working with <a href="https://dblp.org/pid/02/4984.html">Qianhua He</a>.</p>
+				</div>
+				<div class="two">
+					Open positions for RAs, PhD, Postdocs, and visitors are available. Please contact Qiuqiang Kong via email.
+				</div>
+			</div>
+			<div id="Group">
+				<div class="three" style="height: 120px;">
+					<h3><b>Group</b></h3>
+					<h4 style="margin-left: 10px;">Postdocs</h4>
+					<ul style="margin-left: 30px;float: left;">
+						<li><a href="">TBC</a>
+						<!-- To be confirmed -->
+					</ul>
+				</div>
+				<div class="three" style="height: 70px;">
+					<h4 style="margin-left: 10px;">PhD Students</h4>
+					<ul style="margin-left: 30px;float: left;">
+						<li><a href="">TBC</a></li>
+						<!-- To be confirmed -->
+					</ul>
+				</div>
+				<div class="three" style="height: 120px;">
+					<h4 style="margin-left: 10px;">Alumni</h4>
+					<ul style="margin-left: 30px;float: left;">
+						<li><a href="">Yin Zhu</a></li>
+						<li><a href="https://cheriell.github.io/">Lele Liu</a></li>
+						<li><a href="https://haoheliu.github.io/">Haohe Liu</a></li>
+						</li>
+					</ul>
+					<ul style="margin-left: 30px;float: left;margin-left: 150px;">
+						<li><a href="https://kinwaicheuk.github.io/">Kin Wai Cheuk</a> (with <a href="https://keunwoochoi.github.io/">Keunwoo Choi)</li>
+						<li><a href="">Jiafeng Liu</a></li>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="Teaching">
+				<div class="three" style="height: 120px;">
+					<h3><b>Teaching</b></h3>
+					<ul style="margin-left: 30px;">
+						<li><a href="">To Appear
+							</a></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div id="Selected Publications">
+				
+				<div class="pu">
+					<img src="./img/7.png" alt="">
+					<div>
+						<h4><a href="">GiantMIDI-Piano: A large-scale midi dataset for classical piano music</a></h4>
+						<p class="pu1">Qiuqiang Kong, Bochen Li, Jitong Chen, Yuxuan Wang</p>
+						<p>TISMIR 2022 / <a href="">Paper</a> / <a
+								href="https://github.com/bytedance/GiantMIDI-Piano">Code</a></p>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</body>
 </html>
